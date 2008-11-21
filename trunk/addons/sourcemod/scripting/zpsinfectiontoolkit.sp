@@ -26,11 +26,13 @@ Provides the following console commands:
 
 new g_InfectionTimeOffset = 0;
 
+#define PLUGIN_VERSION "2.0.0"
+
 public Plugin:myinfo = {
 	name = "Zombie Panic:Source Infection Toolkit",
 	author = "Dr. Rambone Murdoch PhD",
 	description = "Basic infection controls",
-	version = "2.0.0",
+	version = PLUGIN_VERSION,
 	url = "http://rambonemurdoch.blogspot.com/"
 }	
 
@@ -59,6 +61,11 @@ public OnPluginStart() {
 	RegAdminCmd(
 		"zit_checkup", onCmdCheckup, ADMFLAG_GENERIC,
 		"See if a player is infected, and how long until they turn. Output is to your chat."
+	);
+	CreateConVar(
+		"zit_version", PLUGIN_VERSION,
+		"ZP:S Infection Toolkit",
+		FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_REPLICATED|FCVAR_NOTIFY
 	);
 }
 
