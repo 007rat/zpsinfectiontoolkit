@@ -6,8 +6,8 @@
 *
 
 Adds the following natives for use in your plugins:
-	Float:ZIT_InfectPlayerInXSeconds(ent, Float:seconds)
-	ZIT_DisinfectPlayer(ent)
+	Float:ZIT_InfectPlayerInXSeconds(player, Float:seconds)
+	ZIT_DisinfectPlayer(player)
 	bool:ZIT_PlayerIsInfected(player)
 	Float:ZIT_GetPlayerTurnTime(player)
 
