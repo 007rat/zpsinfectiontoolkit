@@ -3,8 +3,8 @@
 ** 	by DR RAMBONE MURDOCH PHD
 **
 **  Visit the West Coast Zombie Hideout
-**
 *
+
 Adds the following natives for use in your plugins:
 	Float:ZIT_InfectPlayerInXSeconds(ent, Float:seconds)
 	ZIT_DisinfectPlayer(ent)
@@ -15,19 +15,16 @@ Provides the following console commands:
 	zie_infectplayer <playerid> <time to infection in seconds>
 	zie_disinfectplayer <playerid>
 	zie_checkup <playerid>
-*/
+*
+***
+************
+************************************************/
+
 #include <logging>
 #include <helpers>
 #include <zpsinfectiontoolkit>
 
-#define LIN_INFECTION_TIME_OFFSET_V13 5036
-#define WIN_INFECTION_TIME_OFFSET_V13 4960
-#define LIN_INFECTION_TIME_OFFSET 5052
-#define WIN_INFECTION_TIME_OFFSET 4976
-#define INFECTION_TIME_OFFSET LIN_INFECTION_TIME_OFFSET
-
 new g_InfectionTimeOffset = 0;
-
 
 public Plugin:myinfo = {
 	name = "Zombie Panic:Source Infection Toolkit",
