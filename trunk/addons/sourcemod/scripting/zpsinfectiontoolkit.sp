@@ -122,7 +122,7 @@ public Action:onCmdInfectPlayer(client, args) {
 	ent = FindTarget(client, buf);
 	if(ent == -1) 
 		return Plugin_Handled;
-	PrintToChat(client, "Infecting %d", ent);
+	PrintToChat(client, "Infecting %s", buf);
 	if(args == 2) {
 		GetCmdArg(2, buf, sizeof(buf));
 		seconds = StringToFloat(buf);
