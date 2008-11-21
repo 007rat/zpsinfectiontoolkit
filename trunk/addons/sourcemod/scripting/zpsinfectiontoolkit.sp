@@ -30,7 +30,7 @@ public Plugin:myinfo = {
 	name = "Zombie Panic:Source Infection Toolkit",
 	author = "Dr. Rambone Murdoch PhD",
 	description = "Basic infection controls",
-	version = "1.4.1",
+	version = "2.0.0",
 	url = "http://rambonemurdoch.blogspot.com/"
 }	
 
