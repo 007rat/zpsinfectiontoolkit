@@ -12,9 +12,9 @@ Adds the following natives for use in your plugins:
 	Float:ZIT_GetPlayerTurnTime(player)
 
 Provides the following console commands:
-	zie_infectplayer <playerid> <time to infection in seconds>
-	zie_disinfectplayer <playerid>
-	zie_checkup <playerid>
+	zit_infectplayer <playerid> <time to infection in seconds>
+	zit_disinfectplayer <playerid>
+	zit_checkup <playerid>
 *
 ***
 ************
