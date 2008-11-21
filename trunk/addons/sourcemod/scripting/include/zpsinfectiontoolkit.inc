@@ -10,7 +10,7 @@
 #endif
 #define _zpsinfectiontoolkit_included
 
-native Float:ZIT_InfectPlayerInXSeconds(ent, Float:seconds);
-native ZIT_DisinfectPlayer(ent);
+native Float:ZIT_InfectPlayerInXSeconds(player, Float:seconds);
+native ZIT_DisinfectPlayer(player);
 native bool:ZIT_PlayerIsInfected(player);
 native Float:ZIT_GetPlayerTurnTime(player);
