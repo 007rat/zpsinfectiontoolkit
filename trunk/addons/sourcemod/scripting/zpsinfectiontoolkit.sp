@@ -16,6 +16,7 @@ Provides the following console commands:
 	zie_disinfectplayer <playerid>
 	zie_checkup <playerid>
 */
+#include <logging>
 #include <zpsinfectiontoolkit>
 
 #define LIN_INFECTION_TIME_OFFSET_V13 5036
@@ -44,7 +45,8 @@ public bool:AskPluginLoad(Handle:myself, bool:late, String:error[], err_max) {
 }
 
 public OnPluginStart() {
-	LoadConfig();
+	if(!LoadConfig())
+		LogError("Couldn't load ZIT config!");
 	// zie_infectplayer <playerid> <time to infection in seconds>
 	RegAdminCmd("zit_infectplayer", onCmdInfectPlayer, ADMFLAG_GENERIC,
 		"Infect a player in x seconds"
