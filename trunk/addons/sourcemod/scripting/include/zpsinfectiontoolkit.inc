@@ -1,6 +1,6 @@
 /********************************************** 
 ** ZPS Infection Toolkit
-** by Dr Rambone Murdoch PhD
+** by DR RAMBONE MURDOCH PHD
 **
 ** Visit the West Coast Zombie Hideout
 **
