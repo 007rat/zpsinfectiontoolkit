@@ -49,16 +49,16 @@ public OnPluginStart() {
 		SetFailState("Couldn't load ZIT config!");
 	// zie_infectplayer <playerid> <time to infection in seconds>
 	RegAdminCmd(
-		"zit_infectplayer", onCmdInfectPlayer, ADMFLAG_GENERIC,
+		"zit_infectplayer", onCmdInfectPlayer, ADMFLAG_SLAY,
 		"Infect a player in x seconds"
 	);
 	// zie_disinfectplayer <playerid>
 	RegAdminCmd(
-		"zit_disinfectplayer", onCmdDisinfectPlayer, ADMFLAG_GENERIC,
+		"zit_disinfectplayer", onCmdDisinfectPlayer, ADMFLAG_SLAY,
 		"Disinfect a player"
 	);
 	RegAdminCmd(
-		"zit_checkup", onCmdCheckup, ADMFLAG_GENERIC,
+		"zit_checkup", onCmdCheckup, ADMFLAG_SLAY,
 		"See if a player is infected, and how long until they turn. Output is to your chat."
 	);
 	CreateConVar(
