@@ -20,7 +20,6 @@ Provides the following console commands:
 ************
 ************************************************/
 
-#include <logging>
 #include <helpers>
 #include <zpsinfectiontoolkit>
 
@@ -47,7 +46,7 @@ public bool:AskPluginLoad(Handle:myself, bool:late, String:error[], err_max) {
 public OnPluginStart() {
 	LoadTranslations("common.phrases")
 	if(!LoadConfig())
-		LogError("Couldn't load ZIT config!");
+		SetFailState("Couldn't load ZIT config!");
 	// zie_infectplayer <playerid> <time to infection in seconds>
 	RegAdminCmd(
 		"zit_infectplayer", onCmdInfectPlayer, ADMFLAG_GENERIC,
