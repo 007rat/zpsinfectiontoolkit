@@ -70,24 +70,12 @@ public OnPluginStart() {
 }
 
 bool:LoadConfig() {
-	new Handle:hKv = CreateKeyValues("ZIT");
-	decl String:filename[PLATFORM_MAX_PATH];
-	decl String:platform[16];
-	BuildPath(Path_SM, filename, sizeof(filename), "configs/zpsinfectiontoolkit.cfg");
-	if(!FileToKeyValues(hKv, filename))
-		return false;
-
-	if(!KvGotoFirstSubKey(hKv))
-		return false;
-	
-	// TODO: Is there some more sourcemod-y way to get platform?
-	KvGetString(hKv, "platform", platform, sizeof(platform));
-	if(StrEqual(platform, ""))
-		return false;
-	g_InfectionTimeOffset = KvGetNum(hKv, platform);
-	CloseHandle(hKv);
-	
-	return g_InfectionTimeOffset > 0;
+	// This lets sourcemod distinguish between linux and windows for us
+	new Handle:conf;
+	conf = LoadGameConfigFile("zpsinfectiontoolkit");
+	g_InfectionTimeOffset = GameConfGetOffset(conf, "ZombieTurnTime");
+	CloseHandle(conf);
+	return -1 != g_InfectionTimeOffset;	
 }
 
 /** Console Commands **********************************************/
