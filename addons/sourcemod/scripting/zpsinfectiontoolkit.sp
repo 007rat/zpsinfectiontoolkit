@@ -30,7 +30,7 @@ new g_InfectionTimeOffset = 0;
 
 public Plugin:myinfo = {
 	name = "Zombie Panic:Source Infection Toolkit",
-	author = "Dr. Rambone Murdoch PhD",
+	author = "DR RAMBONE MURDOCH PHD",
 	description = "Basic infection controls",
 	version = PLUGIN_VERSION,
 	url = "http://rambonemurdoch.blogspot.com/"
