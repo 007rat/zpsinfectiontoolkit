@@ -6,9 +6,9 @@
 		{
 			"ZombieTurnTime"
 			{
-				// ZPS 1.4
-				"windows"	"4976"
-				"linux"		"5052"
+				// ZPS 1.5
+				"windows"	"4984"
+				"linux"		"5060"
 			}
 		}
 	}
