@@ -116,12 +116,14 @@ public Action:onCmdInfectPlayer(client, args) {
 	ent = FindTarget(client, buf);
 	if(ent == -1) 
 		return Plugin_Handled;
-	PrintToChat(client, "Infecting %s", buf);
+	if(client != 0)
+		PrintToChat(client, "Infecting %s", buf);
 	if(args == 2) {
 		GetCmdArg(2, buf, sizeof(buf));
 		seconds = StringToFloat(buf);
-	} else { 
-		PrintToChat(client, "No time set, infection takes hold immediately", buf);
+	} else {
+		if(client != 0)
+			PrintToChat(client, "No time set, infection takes hold immediately", buf);
 		seconds = 0.0;
 	}
 	ZIT_InfectPlayerInXSeconds(ent, seconds);
