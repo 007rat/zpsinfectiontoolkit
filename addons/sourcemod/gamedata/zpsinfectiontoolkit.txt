@@ -7,9 +7,14 @@
 			"ZombieTurnTime"
 			{
 				// ZPS 1.5
-				"windows"	"4984"
-				"linux"		"5060"
+				"windows"	"4992"
+				"linux"		"5068"
 			}
+            "IsCarrier"
+            {
+                "windows"   "4974"
+                "linux"     "5050"
+            }
 		}
 	}
 }
